@@ -1,6 +1,9 @@
 <template>
   <div class="screen flex-col gap-20rpx text-blue text-38 font-600 center">
-    <div>Hello Uniapp</div>
+    <div class="flex items-center gap-8rpx">
+      <div>Hello Uniapp</div>
+      <div class="i-carbon-star text-red" />
+    </div>
     <div class="flex gap-20rpx">
       <span>Base on</span>
       <span class="text-green">Vue3+Ts+Vite+Unocss！</span>
