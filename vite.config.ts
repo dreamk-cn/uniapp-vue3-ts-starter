@@ -1,26 +1,25 @@
-import { defineConfig, loadEnv, UserConfig } from "vite";
-import uni from "@dcloudio/vite-plugin-uni";
 import path from 'node:path'
+import { defineConfig, loadEnv, UserConfig } from "vite";
+import Uni from "@dcloudio/vite-plugin-uni";
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(async(config): Promise<UserConfig> => {
-  const unocss = await import('unocss/vite').then(i => i.default)
+  const Unocss = await import('unocss/vite').then(i => i.default)
   const { mode } = config;
   const env = loadEnv(mode, __dirname, ['K', 'VITE'])
   const { VITE_PUBLIC_PATH, VITE_PORT, K_BASE_URL } = env
   return {
     base: VITE_PUBLIC_PATH,
     plugins: [
-      uni(),
-      unocss(),
+      Uni(),
+      Unocss(),
       Components({
         dts: true,
-        deep: false, // 深度扫描组件目录
+        deep: true, // 深度扫描组件目录
         dirs: [
           'src/components',
-          'src/widgets'
         ],
       }),
       AutoImport({

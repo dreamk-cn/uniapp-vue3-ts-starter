@@ -1,5 +1,3 @@
-import { ref } from "vue"
-
 export function useToggle(initValue = false) {
   const value = ref(initValue)
 

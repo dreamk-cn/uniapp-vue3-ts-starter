@@ -58,7 +58,6 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-4030620241128001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4030620241128001",
     "pinia": "^3.0.2",
-    "unocss": "^66.1.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
@@ -70,6 +69,7 @@
     "@vue/runtime-core": "^3.4.21",
     "@vue/tsconfig": "^0.7.0",
     "typescript": "^5.8.3",
+    "unocss": "^66.0.0",
     "unocss-preset-weapp": "^66.0.0",
     "unplugin-auto-import": "^19.2.0",
     "unplugin-vue-components": "^28.5.0",
