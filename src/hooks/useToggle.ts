@@ -11,6 +11,6 @@ export function useToggle(initValue = false) {
   return {
     value,
     toggle,
-    setValue
+    setValue,
   }
 }
